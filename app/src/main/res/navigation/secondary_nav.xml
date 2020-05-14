@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/secondary_nav"
+    app:startDestination="@id/secondMainFragment">
+
+    <fragment
+        android:id="@+id/secondMainFragment"
+        android:name="com.igao.navigationcomponent.secondflow.SecondMainFragment"
+        android:label="fragment_second_main"
+        tools:layout="@layout/fragment_second_main" >
+        <action
+            android:id="@+id/action_secondMainFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.igao.navigationcomponent.secondflow.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
+</navigation>

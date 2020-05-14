@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.igao.navigationcomponent.mainflow.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_mainSecondFragment"
+            app:destination="@id/mainSecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainSecondFragment"
+        android:name="com.igao.navigationcomponent.mainflow.MainSecondFragment"
+        android:label="fragment_main_second"
+        tools:layout="@layout/fragment_main_second" >
+        <action
+            android:id="@+id/action_mainSecondFragment_to_mainThirdFragment"
+            app:destination="@id/mainThirdFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_enter"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainThirdFragment"
+        android:name="com.igao.navigationcomponent.mainflow.MainThirdFragment"
+        android:label="fragment_main_third"
+        tools:layout="@layout/fragment_main_third" />
+</navigation>
